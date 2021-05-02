@@ -27,6 +27,7 @@ for (let method of methods) {
     div.appendChild(label);
 
     const input = document.createElement("textarea");
+    input.id = method;
     div.appendChild(input);
     
     const button = document.createElement("button");
