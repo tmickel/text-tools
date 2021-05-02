@@ -13,8 +13,7 @@ class Tools {
 }
 
 const tools = new Tools();
-const methods = Reflect.ownKeys(tools);
-console.log(methods);
+const methods = Object.getOwnPropertyNames(Object.getPrototypeOf(tools)).filter(name => name !== "constructor");
 for (let method of methods) {
     const div = document.createElement("div");
     const label = document.createElement("h3");
