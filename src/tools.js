@@ -13,7 +13,7 @@ class Tools {
 }
 
 const tools = new Tools();
-const buttons = document.getElementsByTagName("buttons");
+const buttons = document.getElementsByTagName("button");
 for (let button of buttons) {
     button.addEventListener("click", (e) => {
         const op = button.id;
