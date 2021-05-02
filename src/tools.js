@@ -1,8 +1,13 @@
-const textareas = document.getElementsByTagName("textarea");
-for (let textarea of textareas) {
-    textarea.addEventListener("focusout", (e) => window[textarea.id](e));
+class Tools {
+    shuffle(e) {
+        console.log(e);
+    }
 }
 
-function shuffle(e) {
-    console.log(e);
+const tools = new Tools();
+const textareas = document.getElementsByTagName("textarea");
+for (let textarea of textareas) {
+    console.log(textarea, textarea.id);
+    textarea.addEventListener("focusout", (e) => tools[textarea.id](e));
 }
+
