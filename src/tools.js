@@ -22,12 +22,13 @@ const tools = new Tools();
 const methods = Object.getOwnPropertyNames(Object.getPrototypeOf(tools)).filter(name => name !== "constructor");
 for (let method of methods) {
     const div = document.createElement("div");
-    div.class = "tool";
+    div.className = "tool";
     const label = document.createElement("h3");
     label.innerHTML = method;
     div.appendChild(label);
 
     const input = document.createElement("textarea");
+    input.className = "input";
     input.id = method;
     input.placeholder = "Input";
     div.appendChild(input);
@@ -40,6 +41,7 @@ for (let method of methods) {
     div.appendChild(button);
 
     const output = document.createElement("textarea");
+    output.className = "output;
     output.placeholder = "Result";
     output.autocomplete = "off";
     div.appendChild(output);
