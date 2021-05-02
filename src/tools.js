@@ -13,13 +13,27 @@ class Tools {
 }
 
 const tools = new Tools();
-const buttons = document.getElementsByTagName("button");
-for (let button of buttons) {
-    button.addEventListener("click", (e) => {
-        const op = button.id;
-        const input = document.getElementById(`${op}-input`).value;
-        const result = tools[op](input);
-        document.getElementById(`${op}-result`).value = result;
-    });
-}
+const methods = Reflect.ownKeys(tools);
+for (let method of methods) {
+    const div = document.createElement("div");
+    const label = document.createElement("h3");
+    label.innerHTML = method;
+    div.appendChild(label);
 
+    const input = document.createElement("textarea");
+    div.appendChild(input);
+    
+    const button = document.createElement("button");
+    button.innerHTML = "▶ Run";
+    button.addEventListener("click", (e) => {
+        output.value = tools[method](input.value);
+    })
+    div.appendChild(button);
+
+    const output = document.createElement("textarea");
+    output.placeholder = "Result";
+    output.autocomplete = "off";
+    div.appendChild(output);
+    
+    document.body.appendChild(div);
+}
