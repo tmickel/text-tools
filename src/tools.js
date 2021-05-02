@@ -1,6 +1,7 @@
 class Tools {
     shuffle(str) {
         console.log(str);
+        return str;
     }
 }
 
