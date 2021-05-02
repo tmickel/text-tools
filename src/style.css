@@ -21,3 +21,16 @@ button {
 button:active {
     background: #219d21;
 }
+
+.tool {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1.8fr 0.2fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "input output"
+    "button button";
+}
+button { grid-area: button; }
+.input { grid-area: input; }
+.output { grid-area: output; }
