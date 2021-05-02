@@ -21,12 +21,13 @@ class Tools {
 const tools = new Tools();
 const methods = Object.getOwnPropertyNames(Object.getPrototypeOf(tools)).filter(name => name !== "constructor");
 for (let method of methods) {
-    const div = document.createElement("div");
-    div.className = "tool";
     const label = document.createElement("h3");
     label.innerHTML = method;
-    div.appendChild(label);
+    document.body.appendChild(label);
 
+    const div = document.createElement("div");
+    div.className = "tool";
+    
     const input = document.createElement("textarea");
     input.className = "input";
     input.id = method;

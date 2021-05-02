@@ -1,5 +1,4 @@
 textarea {
-    width: 500px;
     height: 100px;
     border: 1px solid #000;
     border-radius: 5px;
@@ -7,7 +6,6 @@ textarea {
 }
 
 button {
-    width: 506px;
     height: 40px;
     background: #196619;
     border-radius: 5px;
