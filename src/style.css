@@ -7,14 +7,15 @@ textarea {
 }
 
 button {
-    width: 100px;
-    height: 100px;
-    vertical-align: top;
+    width: 506px;
+    height: 40px;
     background: #196619;
-    border-radius: 20px;
+    border-radius: 5px;
     color: #fff;
     border: none;
     cursor: pointer;
+    display: block;
+    margin: 0;
 }
 
 button:active {
