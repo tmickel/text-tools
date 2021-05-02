@@ -19,7 +19,7 @@ for (let button of buttons) {
         const op = button.id;
         const input = document.getElementById(`${op}-input`).value;
         const result = tools[op](input);
-        document.getElementById(`${op}-result`).innerHTML = result;
+        document.getElementById(`${op}-result`).value = result;
     });
 }
 
