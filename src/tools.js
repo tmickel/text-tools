@@ -41,7 +41,7 @@ for (let method of methods) {
     div.appendChild(button);
 
     const output = document.createElement("textarea");
-    output.className = "output;
+    output.className = "output";
     output.placeholder = "Result";
     output.autocomplete = "off";
     div.appendChild(output);
