@@ -13,12 +13,13 @@ class Tools {
 }
 
 const tools = new Tools();
-const textareas = document.getElementsByTagName("textarea");
-for (let textarea of textareas) {
-    textarea.addEventListener("focusout", (e) => {
-        const str = e.target.value;
-        const result = tools[textarea.id](str);
-        document.getElementById(`${textarea.id}-result`).innerHTML = result;
+const buttons = document.getElementsByTagName("buttons");
+for (let button of buttons) {
+    button.addEventListener("click", (e) => {
+        const op = button.id;
+        const input = document.getElementById(`${op}-input`).value;
+        const result = tools[op](input);
+        document.getElementById(`${op}-result`).innerHTML = result;
     });
 }
 
