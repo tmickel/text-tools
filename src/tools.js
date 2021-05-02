@@ -10,6 +10,12 @@ class Tools {
         shuffleArray(chars);
         return chars.join('');
     }
+
+    reverse(str) {
+        const chars = [...str];
+        chars.reverse();
+        return chars.join('');
+    }
 }
 
 const tools = new Tools();
