@@ -1,13 +1,15 @@
 class Tools {
-    shuffle(e) {
-        console.log(e);
+    shuffle(str) {
+        console.log(str);
     }
 }
 
 const tools = new Tools();
 const textareas = document.getElementsByTagName("textarea");
 for (let textarea of textareas) {
-    console.log(textarea, textarea.id);
-    textarea.addEventListener("focusout", (e) => tools[textarea.id](e));
+    textarea.addEventListener("focusout", (e) => {
+        const str = e.target.value;
+        tools[textarea.id](str)
+    });
 }
 
