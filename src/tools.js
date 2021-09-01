@@ -16,6 +16,14 @@ class Tools {
         chars.reverse();
         return chars.join('');
     }
+
+    base64Encode(str) {
+        return btoa(str);
+    }
+
+    base64Decode(str) {
+        return atob(str);
+    }
 }
 
 const tools = new Tools();
@@ -27,13 +35,13 @@ for (let method of methods) {
 
     const div = document.createElement("div");
     div.className = "tool";
-    
+
     const input = document.createElement("textarea");
     input.className = "input";
     input.id = method;
     input.placeholder = "Input";
     div.appendChild(input);
-    
+
     const button = document.createElement("button");
     button.innerHTML = "▶ Run";
     button.addEventListener("click", (e) => {
@@ -46,6 +54,6 @@ for (let method of methods) {
     output.placeholder = "Result";
     output.autocomplete = "off";
     div.appendChild(output);
-    
+
     document.body.appendChild(div);
 }
